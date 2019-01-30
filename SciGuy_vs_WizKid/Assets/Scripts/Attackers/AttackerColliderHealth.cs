@@ -24,7 +24,7 @@ public class AttackerColliderHealth : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == "Bullet")
+        if(collision.gameObject.tag == "Bullet")
         {
             health -= 10;
             Debug.Log("Current health is" + health);
