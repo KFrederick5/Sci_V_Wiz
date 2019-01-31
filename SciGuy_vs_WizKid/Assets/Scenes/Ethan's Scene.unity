@@ -121,12 +121,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 458059424}
-  - component: {fileID: 458059423}
   - component: {fileID: 458059422}
+  - component: {fileID: 458059423}
   - component: {fileID: 458059421}
+  - component: {fileID: 458059425}
   m_Layer: 0
   m_Name: GameObject
-  m_TagString: Defender
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,11 +188,11 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458059420}
-  m_BodyType: 0
+  m_BodyType: 2
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -199,7 +200,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &458059423
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -224,12 +225,38 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 458059420}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.38, y: 0.18, z: 0.026062}
+  m_LocalPosition: {x: -1, y: 2.39, z: 0.026062}
   m_LocalScale: {x: 4.5697, y: 4.5697, z: 4.5697}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &458059425
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 458059420}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.16, y: 0.16}
+  m_EdgeRadius: 0
 --- !u!1 &965355676
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,6 +267,7 @@ GameObject:
   m_Component:
   - component: {fileID: 965355677}
   - component: {fileID: 965355678}
+  - component: {fileID: 965355679}
   m_Layer: 0
   m_Name: AttackerSprite
   m_TagString: Untagged
@@ -309,6 +337,32 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!61 &965355679
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 965355676}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.2, y: 0.2}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.2}
+  m_EdgeRadius: 0
 --- !u!1 &1239719863
 GameObject:
   m_ObjectHideFlags: 0
@@ -318,8 +372,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1239719865}
-  - component: {fileID: 1239719864}
   - component: {fileID: 1239719866}
+  - component: {fileID: 1239719864}
   - component: {fileID: 1239719867}
   - component: {fileID: 1239719868}
   m_Layer: 0
@@ -363,7 +417,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1239719863}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.34, y: 2.34, z: 0}
+  m_LocalPosition: {x: -3.23, y: 2.46, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 965355677}
@@ -390,7 +444,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1239719867
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -413,10 +467,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1239719863}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5484d4703ad5408bb8617a10b77b6cc, type: 3}
+  m_Script: {fileID: 11500000, guid: 9492b52e5da7b4786b0fd6f70f748076, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 0
+  speed: 100
 --- !u!1 &1424251861
 GameObject:
   m_ObjectHideFlags: 0
