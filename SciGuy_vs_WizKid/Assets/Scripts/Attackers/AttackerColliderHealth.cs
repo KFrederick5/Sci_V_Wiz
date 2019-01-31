@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackerColliderHealth : MonoBehaviour
 {
-    public float health;
+    public static float health;
 
     // Start is called before the first frame update
     private void Awake()
