@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class AttackerColliderHealth : MonoBehaviour
 {
-    public static float health;
+    public float health;
 
     // Start is called before the first frame update
     private void Awake()
@@ -19,7 +19,10 @@ public class AttackerColliderHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
+       if(health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -27,7 +30,7 @@ public class AttackerColliderHealth : MonoBehaviour
         if(collision.gameObject.tag == "Bullet")
         {
             health -= 10;
-            Debug.Log("Current health is" + health);
+            Debug.Log("Current health is " + health);
         }
     }
 }
