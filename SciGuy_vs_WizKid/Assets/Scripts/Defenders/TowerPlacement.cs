@@ -13,6 +13,20 @@ public class TowerPlacement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        TowerSelect();
+
     }
+
+    void TowerSelect()
+    {
+        if(Input.GetMouseButtonDown
+            
+    }
+
+    void TowerPlace()
+    {
+
+    }
+
+    
 }
