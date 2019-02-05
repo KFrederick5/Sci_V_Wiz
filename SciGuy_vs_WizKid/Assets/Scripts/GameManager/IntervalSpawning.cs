@@ -8,6 +8,7 @@ public class IntervalSpawning : MonoBehaviour
     // Start is called before the first frame update
     public Stack<GameObject> AttackerQueue;
     public GameObject b;
+    private int time;
     void Awake()
     {
         AttackerQueue = new Stack<UnityEngine.GameObject>();
@@ -23,7 +24,7 @@ public class IntervalSpawning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space"))
             StartCoroutine(IntervalSpawn(AttackerQueue));
     }
 
@@ -33,7 +34,8 @@ public class IntervalSpawning : MonoBehaviour
         {
             Instantiate(AttackerList.Pop() as GameObject);
             Debug.Log("Popping");
-            yield return new WaitForSeconds(Random.Range(2, 5));
+            time = Random.Range(2, 5);
+            yield return new WaitForSeconds(time);
         }
     }
 }
