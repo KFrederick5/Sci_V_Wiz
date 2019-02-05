@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TowerPlacement : MonoBehaviour
+public class TowerTrigger : MonoBehaviour
 {
+    GameObject tower;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,19 +15,11 @@ public class TowerPlacement : MonoBehaviour
     void Update()
     {
         
-
     }
 
-    void TowerSelect()
-    {
-        
-            
-    }
-
-    void TowerPlace()
+    private void OnCollisionStay2D(Collision2D collision)
     {
 
-    }
 
-    
+    }
 }
