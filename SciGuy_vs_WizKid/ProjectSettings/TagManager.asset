@@ -6,7 +6,12 @@ TagManager:
   tags:
   - Bullet
   - Defender
+<<<<<<< HEAD
   - Attacker
+=======
+  - LeftYard
+  - RightYard
+>>>>>>> 2bc05b42ebdc14a4a61b6431b66f61c7dc3e29bc
   layers:
   - Default
   - TransparentFX
