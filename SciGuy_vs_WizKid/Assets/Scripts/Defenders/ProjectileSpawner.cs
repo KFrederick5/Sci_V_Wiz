@@ -7,21 +7,20 @@ public class ProjectileSpawner : MonoBehaviour
     public bool enabled = true;
     public GameObject Prefab;
     public float timeScale = 1.0f;
+    public float currentTime = 0.0f;
     // Start is called before the first frame update
-    void Start()
+    void Update()
     {
-        StartCoroutine(SpawnLoop());
-    }
-
-    IEnumerator SpawnLoop()
-    {
-        while (enabled)
+        currentTime += Time.deltaTime;
+        if ((currentTime >= timeScale) && enabled)
         {
-            yield return new WaitForSeconds(timeScale);
             GameObject go;
             go = Instantiate(Prefab) as GameObject;
             go.transform.parent = transform;
+            currentTime = 0.0f;
         }
     }
+
+    
 
 }
