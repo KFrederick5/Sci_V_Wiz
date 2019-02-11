@@ -7,6 +7,7 @@ public class UIManager: MonoBehaviour
 {
 
     public string MAIN_GAME;
+    public string START_SCREEN;
     GameObject[] pauseObjects;
 
     void Start()
@@ -72,5 +73,10 @@ public class UIManager: MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(MAIN_GAME);
+    }
+
+    public void ToMainMenu()
+    {
+        SceneManager.LoadScene(START_SCREEN);
     }
 }
