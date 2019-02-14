@@ -9,7 +9,6 @@ public class AttackerColliderHealth : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        health = 100.0f;
 
     }
     void Start()
