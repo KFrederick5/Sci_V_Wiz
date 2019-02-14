@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class ProjectileSpawner : MonoBehaviour
 {
-    public bool enabled = true;
     public GameObject Prefab;
     public float timeScale = 1.0f;
     public float currentTime = 0.0f;

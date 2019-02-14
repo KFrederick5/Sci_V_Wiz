@@ -16,4 +16,12 @@ public class Projectile : MonoBehaviour
     {
         transform.Translate(speed, 0.0f, 0.0f);
     }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Attacker")
+        {
+            Destroy(gameObject);
+        }
+    }
 }

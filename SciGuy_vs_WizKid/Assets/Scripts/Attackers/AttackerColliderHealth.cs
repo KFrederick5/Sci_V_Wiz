@@ -31,7 +31,7 @@ public class AttackerColliderHealth : MonoBehaviour
     {
         if (isColliding) return;
         isColliding = true;
-        if(collision.gameObject.tag == "Bullet")
+        if(collision.gameObject.tag == "Projectile")
         {
             health -= 10;
             Debug.Log("Current health is " + health);
