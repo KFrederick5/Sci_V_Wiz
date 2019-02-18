@@ -34,8 +34,21 @@ public class PlacementManager : MonoBehaviour
 
     public void PlaceTower() 
     {
+        Debug.Log("x: " + roundFloat(Input.mousePosition.x) + " y: " + roundFloat(Input.mousePosition.y));
+        Instantiate(this.clickedBtn.TowerButton, Camera.main.ScreenToWorldPoint(new Vector3(roundFloat(Input.mousePosition.x), roundFloat(Input.mousePosition.y), 10)), Quaternion.identity);
+        //Instantiate(this.clickedBtn.TowerButton,Camera.main.ScreenToWorldPoint(new Vector3(roundFloat(Input.mousePosition.x), roundFloat(Input.mousePosition.y), 10)), Quaternion.identity);
 
-        Debug.Log("Current Tower " + this.clickedBtn);
-    
+    }
+
+    public int roundFloat(float f)
+    {
+        if(f % 10 >= 5)
+        {
+            return (int)(f) + 5 ;
+        }
+        else
+        {
+            return (int)(f);
+        }
     }
 }

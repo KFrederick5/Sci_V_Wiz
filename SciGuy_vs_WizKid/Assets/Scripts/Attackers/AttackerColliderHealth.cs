@@ -9,7 +9,6 @@ public class AttackerColliderHealth : MonoBehaviour
     // Start is called before the first frame update
     private void Awake()
     {
-        health = 100.0f;
 
     }
     void Start()
@@ -31,7 +30,7 @@ public class AttackerColliderHealth : MonoBehaviour
     {
         if (isColliding) return;
         isColliding = true;
-        if(collision.gameObject.tag == "Bullet")
+        if(collision.gameObject.tag == "Projectile")
         {
             health -= 10;
             Debug.Log("Current health is " + health);

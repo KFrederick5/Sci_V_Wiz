@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class MeleeDamage : MonoBehaviour
 {
-    public float attack;
+    public float atkSpeed;
+    public float atkDmg;
     // Start is called before the first frame update
     void Start()
     {
-        attack = 3f;
+        atkSpeed = 3f;
     }
 
     // Update is called once per frame
@@ -17,11 +18,13 @@ public class MeleeDamage : MonoBehaviour
         
     }
 
-    IEnumerator DamageOverTime(float attackSpeed)
+    IEnumerator DamageOverTime(float attackSpeed, Collider2D tower)
     {
         while(gameObject.GetComponent<AttackerColliderHealth>().health > 0)
         {
-            Debug.Log("Did damage");
+            TowerHealth towerHealthScript = tower.GetComponent<TowerHealth>();
+            towerHealthScript.health -= atkDmg;
+            Debug.Log("An enemy did damage");
             yield return new WaitForSeconds(attackSpeed);
         }
     }
@@ -29,9 +32,9 @@ public class MeleeDamage : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        if(coll.gameObject.tag == "Defender")
+        if(coll.gameObject.tag == "Tower")
         {
-            StartCoroutine(DamageOverTime(attack));
+            StartCoroutine(DamageOverTime(atkSpeed, coll));
         }
     }
 }
