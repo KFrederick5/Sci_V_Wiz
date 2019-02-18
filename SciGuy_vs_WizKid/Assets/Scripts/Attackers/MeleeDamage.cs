@@ -20,7 +20,7 @@ public class MeleeDamage : MonoBehaviour
 
     IEnumerator DamageOverTime(float attackSpeed, Collider2D tower)
     {
-        while(gameObject.GetComponent<AttackerColliderHealth>().health > 0)
+        while(gameObject.GetComponent<AttackerColliderHealth>().currentHealth > 0)
         {
             TowerHealth towerHealthScript = tower.GetComponent<TowerHealth>();
             towerHealthScript.health -= atkDmg;
