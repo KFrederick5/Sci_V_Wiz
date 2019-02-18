@@ -200,7 +200,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2b87401469a14bd2a916b6bb928a36d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
+  startingHealth: 100
+  currentHealth: 0
+  healthPrefab: {fileID: 0}
+  healthCanvas: {fileID: 0}
+  healthBar: {fileID: 0}
+  offsetYHealth: 0
 --- !u!114 &2338987322331944449
 MonoBehaviour:
   m_ObjectHideFlags: 0
