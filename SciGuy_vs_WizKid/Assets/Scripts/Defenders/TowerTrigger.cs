@@ -4,40 +4,21 @@ using UnityEngine;
 
 public class TowerTrigger : MonoBehaviour
 {
-    private int count;
-    GameObject tower;
-    public static int num_enemies = 0;
-    public static int start_count = 0;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-        num_enemies = transform.childCount;
-        start_count = transform.childCount;
-    }
+    public bool enemies = false;
 
     // Update is called once per frame
     void Update()
     {
-       
-        if (num_enemies > start_count)
-        {
-            ProjectileSpawner spawner = GetComponentInChildren<ProjectileSpawner>();
-            spawner.enabled = true;
-            Debug.Log(num_enemies);
-        }
-        else if (num_enemies == start_count)
-        {
-            ProjectileSpawner spawner = GetComponentInChildren<ProjectileSpawner>();
-            spawner.enabled = false;
-        }
+        AttackerCounter enemies_in_lane = GetComponentInChildren<AttackerCounter>();
+        enemies = enemies_in_lane.enemies_in_lane;
+        Debug.Log(enemies);
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    /*void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Attacker"))
         {
-            num_enemies += 1;
+            num_enemies_private += 1;
             other.transform.parent = transform;
 
         }
@@ -50,5 +31,5 @@ public class TowerTrigger : MonoBehaviour
             spawner.enabled = false;
 
         }
-    }
+    }*/
 }

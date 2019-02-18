@@ -20,8 +20,7 @@ public class Projectile : MonoBehaviour
     {
         if (other.CompareTag("Attacker"))
         {
-            
-            this.gameObject.SetActive(false);
+            Destroy(gameObject);
         }
     }
 }

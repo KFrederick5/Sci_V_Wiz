@@ -19,8 +19,9 @@ public class TestEnemyHealth : MonoBehaviour
         if (other.CompareTag("Projectile"))
         {
             health -= 1.0f;
-            this.gameObject.SetActive(false);
-            TowerTrigger.num_enemies -= 1;
+            //this.gameObject.SetActive(false);
+            Destroy(this.gameObject);
+            
         }
         if (other.CompareTag("Lane"))
         {
