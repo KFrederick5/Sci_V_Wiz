@@ -2,11 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlacementManager : MonoBehaviour
+public class TowerBtn : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject selected;
-    public GameObject possibleTower;
+    [SerializeField]
+    private string towerButton;
+
+    public string TowerButton 
+    {
+        get 
+        {
+            return towerButton;
+        
+        }
+    }
+
     void Start()
     {
         
@@ -16,10 +26,5 @@ public class PlacementManager : MonoBehaviour
     void Update()
     {
         
-    }
-
-    public void SetTower()
-    {
-        selected = possibleTower;
     }
 }

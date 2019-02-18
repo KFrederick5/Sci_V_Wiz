@@ -16,4 +16,12 @@ public class Projectile : MonoBehaviour
     {
         transform.Translate(speed, 0.0f, 0.0f);
     }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Attacker"))
+        {
+            
+            this.gameObject.SetActive(false);
+        }
+    }
 }
