@@ -11,7 +11,6 @@ public class TowerTrigger : MonoBehaviour
     {
         AttackerCounter enemies_in_lane = GetComponentInChildren<AttackerCounter>();
         enemies = enemies_in_lane.enemies_in_lane;
-        Debug.Log(enemies);
     }
 
     /*void OnTriggerEnter2D(Collider2D other)
