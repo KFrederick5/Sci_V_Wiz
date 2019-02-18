@@ -14,6 +14,10 @@ public class UIManager: MonoBehaviour
     {
         Time.timeScale = 1;
         pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause"); 
+        foreach(GameObject x in pauseObjects)
+        {
+            x.SetActive(false);
+        }
         hidePause();
     }
 
