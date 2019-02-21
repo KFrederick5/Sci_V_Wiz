@@ -8,6 +8,8 @@ TagManager:
   - ShowOnPause
   - Projectile
   - Lane
+  - Tower
+  - Ground
   layers:
   - Default
   - TransparentFX
