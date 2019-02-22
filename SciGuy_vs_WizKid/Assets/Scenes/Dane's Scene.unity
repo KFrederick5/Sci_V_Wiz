@@ -218,6 +218,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 411359048}
   health: 3
+  canDie: 1
+  speed: -3
 --- !u!212 &411359052
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -278,7 +280,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &531734312
 PrefabInstance:
@@ -399,7 +401,7 @@ PrefabInstance:
     - target: {fileID: 4605301915379212395, guid: 1d2d7e15b27bdad4c8d8a7d085ccee3a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4605301915379212395, guid: 1d2d7e15b27bdad4c8d8a7d085ccee3a,
         type: 3}
@@ -509,6 +511,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 822444299}
   health: 3
+  canDie: 1
+  speed: -3
 --- !u!212 &822444303
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -652,6 +656,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 873106268}
   health: 3
+  canDie: 1
+  speed: -3
 --- !u!212 &873106272
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -781,6 +787,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5952724020377429854, guid: b392983389a957545ba9ca79f3b5904f,
+        type: 3}
+      propertyPath: canDie
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5952724020377429826, guid: b392983389a957545ba9ca79f3b5904f,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b392983389a957545ba9ca79f3b5904f, type: 3}
 --- !u!1 &1083556682
@@ -864,6 +880,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ship: {fileID: 1083556682}
   health: 3
+  canDie: 1
+  speed: -3
 --- !u!212 &1083556686
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1131,6 +1149,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5125363229813168347, guid: 3d76acec26d4ab8478f62d7fb2d44370,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d76acec26d4ab8478f62d7fb2d44370, type: 3}
 --- !u!4 &1456495563 stripped
@@ -1394,6 +1417,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1d2d7e15b27bdad4c8d8a7d085ccee3a, type: 3}
+--- !u!1 &2052802158 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5952724020377429853, guid: b392983389a957545ba9ca79f3b5904f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1050264519}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &2052802164
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052802158}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.46, y: 0.58}
+    newSize: {x: 0.46, y: 0.58}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.46, y: 0.58}
+  m_EdgeRadius: 0
 --- !u!1001 &5952724020703900400
 PrefabInstance:
   m_ObjectHideFlags: 0

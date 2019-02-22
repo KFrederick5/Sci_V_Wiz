@@ -8,6 +8,8 @@ public class TestEnemyHealth : MonoBehaviour
     public GameObject ship;
     private Rigidbody2D m_rig;
     public float health = 3.0f;
+    public bool canDie = true;
+    public float speed = -3.0f;
     // Start is called before the first frame update
     private void Start()
     {
@@ -20,8 +22,10 @@ public class TestEnemyHealth : MonoBehaviour
         {
             health -= 1.0f;
             //this.gameObject.SetActive(false);
-            Destroy(this.gameObject);
-            
+            if (canDie)
+            {
+                Destroy(this.gameObject);
+            }
         }
         if (other.CompareTag("Lane"))
         {
@@ -33,6 +37,6 @@ public class TestEnemyHealth : MonoBehaviour
     void Update()
     {
         
-        m_rig.velocity = new Vector2(-5f, 0f);
+        m_rig.velocity = new Vector2(speed, 0f);
     }
 }
