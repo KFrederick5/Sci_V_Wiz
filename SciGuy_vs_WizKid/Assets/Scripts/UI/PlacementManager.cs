@@ -26,7 +26,8 @@ public class PlacementManager : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0) && hit)
             {
-                if (hit.transform.tag == "Ground" && hit.transform.childCount == 0)
+                Debug.Log(hit.collider.transform.tag);
+                if (hit.collider.transform.tag == "Ground" && hit.transform.childCount == 0)
                 {
                     PlaceTower(hit.transform); //Place Tower on hit transform, only if the hit is a 'Ground' tag and there isn't anything else parented to it
                 }
