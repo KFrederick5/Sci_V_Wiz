@@ -8,7 +8,10 @@ public class BoardManager : MonoBehaviour
 
     public GameObject lane;
     public Transform grid;
-    public List<GameObject> SpawnList;
+    [SerializeField]
+    private List<Transform> spawnList;
+
+    public List<Transform> SpawnList { get => spawnList;}
 
     private void Awake()
     {
@@ -20,7 +23,7 @@ public class BoardManager : MonoBehaviour
         for (int y = 0; y < rows; y++)
         {
             GameObject instance = Instantiate(lane, new Vector3(0, y, 0f), Quaternion.identity, grid) as GameObject;
-            
+            SpawnList.Add(instance.transform.Find("Items").transform.Find("Attackers"));
             
         }
     }
