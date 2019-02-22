@@ -10,7 +10,6 @@ public class AttackerColliderHealth : MonoBehaviour
 
     private bool isColliding;
 
-    public Canvas healthPrefab;
     public Canvas healthCanvas;
     public Slider healthBar;
     public float offsetYHealth = 1.5f;
@@ -28,10 +27,7 @@ public class AttackerColliderHealth : MonoBehaviour
         currentHealth = startingHealth;
 
         ownerTransform = gameObject.GetComponent<Transform>();
-        Canvas instance = Instantiate(healthPrefab, new Vector3(0,0,0), Quaternion.identity, gameObject.transform);
-        healthCanvas = instance; // store reference to its canvas so don't have to look for it
         healthBar = healthCanvas.GetComponentInChildren<Slider>();
-        //healthBar.transform.position = new Vector2(ownerTransform.position.x, (ownerTransform.position.y + offsetYHealth));
         healthBar.maxValue = startingHealth;
         healthBar.value = startingHealth; //may not be needed, not sure w/ what values slider is initialized with
     }
