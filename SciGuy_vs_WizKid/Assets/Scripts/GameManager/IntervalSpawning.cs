@@ -34,7 +34,7 @@ public class IntervalSpawning : MonoBehaviour
         while (AttackerList.Count > 0)
         {
             int randIndex = Random.Range(0, AttackerSpawnList.Count);
-            GameObject attacker = Instantiate(AttackerList.Pop()) as GameObject;
+            GameObject attacker = Instantiate(AttackerList.Pop(), AttackerSpawnList[randIndex]) as GameObject;
             Debug.Log("Popping");
             time = Random.Range(2, 5); //Wait between 2 to 5 seconds before spawning
             yield return new WaitForSeconds(time);
