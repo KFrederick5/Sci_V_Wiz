@@ -23,7 +23,7 @@ public class MeleeDamage : MonoBehaviour
         while(gameObject.GetComponent<AttackerColliderHealth>().currentHealth > 0)
         {
             TowerHealth towerHealthScript = tower.GetComponent<TowerHealth>();
-            towerHealthScript.health -= atkDmg;
+            towerHealthScript.currentHealth -= atkDmg;
             Debug.Log("An enemy did damage");
             yield return new WaitForSeconds(attackSpeed);
         }

@@ -4,12 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Attacker
-  - ShowOnPause
-  - Projectile
-  - Lane
   - Tower
-  - Ground
+  - Attacker
+  - Projectile
   layers:
   - Default
   - TransparentFX
@@ -44,9 +41,6 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Game Board
-    uniqueID: 1879309291
-    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
