@@ -18,7 +18,6 @@ public class IntervalSpawning : MonoBehaviour
         AttackerQueue.Push(b);
         AttackerQueue.Push(b);
         AttackerQueue.Push(b);
-        print(AttackerQueue.Peek());
     }
 
     // Update is called once per frame
@@ -34,7 +33,7 @@ public class IntervalSpawning : MonoBehaviour
         {
             Instantiate(AttackerList.Pop() as GameObject);
             Debug.Log("Popping");
-            time = Random.Range(2, 5);
+            time = Random.Range(2, 5); //Wait between 2 to 5 seconds before spawning
             yield return new WaitForSeconds(time);
         }
     }
