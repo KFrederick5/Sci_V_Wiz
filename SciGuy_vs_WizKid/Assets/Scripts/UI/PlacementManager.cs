@@ -28,8 +28,7 @@ public class PlacementManager : MonoBehaviour
             {
                 if (hit.transform.tag == "Ground" && hit.transform.childCount == 0)
                 {
-                    PlaceTower(hit.transform);
-                    Debug.Log(hit.transform);
+                    PlaceTower(hit.transform); //Place Tower on hit transform, only if the hit is a 'Ground' tag and there isn't anything else parented to it
                 }
             }
         }
@@ -43,22 +42,7 @@ public class PlacementManager : MonoBehaviour
 
     public void PlaceTower(Transform ground) 
     {
-        Debug.Log("x: " + roundFloat(Input.mousePosition.x) + " y: " + roundFloat(Input.mousePosition.y));
-        Instantiate(this.clickedBtn.TowerButton, ground);
-        //Instantiate(this.clickedBtn.TowerButton, Camera.main.ScreenToWorldPoint(new Vector3(roundFloat(Input.mousePosition.x), roundFloat(Input.mousePosition.y), 10)), Quaternion.identity);
-        //Instantiate(this.clickedBtn.TowerButton,Camera.main.ScreenToWorldPoint(new Vector3(roundFloat(Input.mousePosition.x), roundFloat(Input.mousePosition.y), 10)), Quaternion.identity);
+        Instantiate(this.clickedBtn.TowerButton, ground); //Instantiate on Transform argument
 
-    }
-
-    public int roundFloat(float f)
-    {
-        if(f % 10 >= 5)
-        {
-            return (int)(f) + 5 ;
-        }
-        else
-        {
-            return (int)(f);
-        }
     }
 }

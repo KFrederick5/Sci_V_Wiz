@@ -12,7 +12,7 @@ public class TowerBtn : MonoBehaviour
     {
         get 
         {
-            return towerButton;
+            return towerButton; //Returns gameobject attached to button
         
         }
     }

@@ -9,7 +9,7 @@ public class BoardManager : MonoBehaviour
     public GameObject lane;
     public Transform grid;
 
-    private void Start()
+    private void Awake()
     {
         SetupLevel();
     }
