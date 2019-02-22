@@ -21,6 +21,7 @@ public class BoardManager : MonoBehaviour
         {
             GameObject instance = Instantiate(lane, new Vector3(0, y, 0f), Quaternion.identity, grid) as GameObject;
             
+            
         }
     }
 }
