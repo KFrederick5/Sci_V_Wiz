@@ -31,7 +31,7 @@ public class AttackerColliderHealth : MonoBehaviour
         Canvas instance = Instantiate(healthPrefab, new Vector3(0,0,0), Quaternion.identity, gameObject.transform);
         healthCanvas = instance; // store reference to its canvas so don't have to look for it
         healthBar = healthCanvas.GetComponentInChildren<Slider>();
-        healthBar.transform.position = new Vector2(ownerTransform.position.x, (ownerTransform.position.y + offsetYHealth));
+        //healthBar.transform.position = new Vector2(ownerTransform.position.x, (ownerTransform.position.y + offsetYHealth));
         healthBar.maxValue = startingHealth;
         healthBar.value = startingHealth; //may not be needed, not sure w/ what values slider is initialized with
     }
