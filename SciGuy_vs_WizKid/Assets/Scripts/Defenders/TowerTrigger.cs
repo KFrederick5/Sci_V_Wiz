@@ -4,22 +4,31 @@ using UnityEngine;
 
 public class TowerTrigger : MonoBehaviour
 {
-    GameObject tower;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public bool enemies = false;
 
     // Update is called once per frame
     void Update()
     {
-        
+        AttackerCounter enemies_in_lane = GetComponentInChildren<AttackerCounter>();
+        enemies = enemies_in_lane.enemies_in_lane;
     }
 
-    private void OnCollisionStay2D(Collision2D collision)
+    /*void OnTriggerEnter2D(Collider2D other)
     {
+        if (other.CompareTag("Attacker"))
+        {
+            num_enemies_private += 1;
+            other.transform.parent = transform;
 
-
+        }
     }
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Attacker"))
+        {
+            ProjectileSpawner spawner = GetComponentInChildren<ProjectileSpawner>();
+            spawner.enabled = false;
+
+        }
+    }*/
 }
