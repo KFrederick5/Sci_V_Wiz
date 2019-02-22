@@ -32,6 +32,7 @@ public class MeleeDamage : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll)
     {
+        Debug.Log("Something Collided");
         if(coll.gameObject.tag == "Tower")
         {
             StartCoroutine(DamageOverTime(atkSpeed, coll));
