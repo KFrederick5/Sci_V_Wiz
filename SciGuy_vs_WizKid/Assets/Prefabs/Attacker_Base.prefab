@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 2338987322331944454}
   - component: {fileID: 2338987322331944449}
   - component: {fileID: 8589319672923343627}
+  - component: {fileID: 998284227666885215}
   m_Layer: 0
   m_Name: Attacker_Base
   m_TagString: Attacker
@@ -219,6 +220,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &998284227666885215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2338987322331944458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b5484d4703ad5408bb8617a10b77b6cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  atkSpeed: 3
+  atkDmg: 10
 --- !u!1001 &1803164773118247083
 PrefabInstance:
   m_ObjectHideFlags: 0

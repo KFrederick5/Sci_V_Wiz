@@ -9,8 +9,10 @@ public class IntervalSpawning : MonoBehaviour
     public Stack<GameObject> AttackerQueue;
     public GameObject b;
     private int time;
+    private List<Transform> AttackerSpawnList;
     void Awake()
     {
+        AttackerSpawnList = gameObject.GetComponentInParent<BoardManager>().SpawnList;
         AttackerQueue = new Stack<UnityEngine.GameObject>();
     }
     void Start()
@@ -31,7 +33,8 @@ public class IntervalSpawning : MonoBehaviour
     {
         while (AttackerList.Count > 0)
         {
-            Instantiate(AttackerList.Pop() as GameObject);
+            int randIndex = Random.Range(0, AttackerSpawnList.Count);
+            GameObject attacker = Instantiate(AttackerList.Pop(), AttackerSpawnList[randIndex]) as GameObject;
             Debug.Log("Popping");
             time = Random.Range(2, 5); //Wait between 2 to 5 seconds before spawning
             yield return new WaitForSeconds(time);
