@@ -8,6 +8,7 @@ public class BoardManager : MonoBehaviour
 
     public GameObject lane;
     public Transform grid;
+    public List<GameObject> SpawnList;
 
     private void Awake()
     {
