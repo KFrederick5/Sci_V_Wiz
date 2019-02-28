@@ -27,9 +27,10 @@ public class PlacementManager : MonoBehaviour
             if (Input.GetMouseButtonDown(0) && hit)
             {
                 Debug.Log(hit.collider.transform.tag);
-                if (hit.collider.transform.tag == "Ground" && hit.transform.childCount == 0)
+                if (hit.collider.transform.tag == "Ground" && hit.transform.childCount == 0)//if statement that spawns towers
                 {
                     PlaceTower(hit.transform); //Place Tower on hit transform, only if the hit is a 'Ground' tag and there isn't anything else parented to it
+                    //DefenseUnitComponent.currentCurrency -= 100;
                 }
             }
         }

@@ -8,6 +8,8 @@ public class DefenseUnitComponent : MonoBehaviour
     public float health = 20.0f;
     public float damage = 5.0f;
     public float attack_speed = 0.5f;
+    public int currentCurrency = 300;
+
     // Start is called before the first frame update
     void Start()
     {
