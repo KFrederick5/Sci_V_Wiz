@@ -12,12 +12,6 @@ public class CurrencyGenerator : MonoBehaviour
     public float currentTime = 0.0f;
     public GameObject variableManager;
 
-    void OnGUI()
-    {
-        // Make a text field that modifies stringToEdit.
-        stringToEdit = GUI.TextField(new Rect(10, 10, 200, 20), stringToEdit, 25);
-    }
-
     // Start is called before the first frame update
     void Start()
     {

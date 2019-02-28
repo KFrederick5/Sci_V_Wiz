@@ -9,16 +9,17 @@ public class DefenseUnitComponent : MonoBehaviour
     public float damage = 5.0f;
     public float attack_speed = 0.5f;
     public int currentCurrency = 300;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
+    public string stringToEdit = "";
+    public string baseString = "Currency: ";
+    public float testNumber = 0;
     void Update()
     {
-        
+        testNumber = currentCurrency;
+        stringToEdit = baseString + testNumber;
+    }
+    void OnGUI()
+    {
+        // Make a text field that modifies stringToEdit.
+        stringToEdit = GUI.TextField(new Rect(10, 10, 200, 20), stringToEdit, 25);
     }
 }
