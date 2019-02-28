@@ -7,6 +7,7 @@ public class TowerBtn : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField]
     private GameObject towerButton;
+    public int price;
 
     public GameObject TowerButton 
     {

@@ -11,6 +11,7 @@ public class PlacementManager : MonoBehaviour
     public TowerBtn clickedBtn{ get; private set; }
     Vector2 ray;
     RaycastHit2D hit;
+    public int priceOfCurrentTower;
 
     void Start()
     {
@@ -29,8 +30,14 @@ public class PlacementManager : MonoBehaviour
                 Debug.Log(hit.collider.transform.tag);
                 if (hit.collider.transform.tag == "Ground" && hit.transform.childCount == 0)//if statement that spawns towers
                 {
-                    PlaceTower(hit.transform); //Place Tower on hit transform, only if the hit is a 'Ground' tag and there isn't anything else parented to it
-                    //DefenseUnitComponent.currentCurrency -= 100;
+                    if (GameObject.Find("DefenseVariableManager").GetComponent<DefenseUnitComponent>().currentCurrency >= priceOfCurrentTower)
+                    {
+                        PlaceTower(hit.transform); //Place Tower on hit transform, only if the hit is a 'Ground' tag and there isn't anything else parented to it
+                        GameObject.Find("DefenseVariableManager").GetComponent<DefenseUnitComponent>().currentCurrency -= priceOfCurrentTower;
+                    }
+                    /*else{
+                        //Do Something
+                    } */
                 }
             }
         }
@@ -40,6 +47,12 @@ public class PlacementManager : MonoBehaviour
     {
         this.clickedBtn = tower;
         Debug.Log("got" + tower);
+        SetPrice(this.clickedBtn);
+    }
+
+    public void SetPrice(TowerBtn tower)
+    {
+        priceOfCurrentTower = tower.price;
     }
 
     public void PlaceTower(Transform ground) 
