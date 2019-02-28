@@ -496,8 +496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5484d4703ad5408bb8617a10b77b6cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  atkSpeed: 3
-  atkDmg: 100
+  atkSpeed: 1
+  atkDmg: 10
 --- !u!61 &1747395890
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -600,6 +600,16 @@ PrefabInstance:
         type: 3}
       propertyPath: enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294353009104223914, guid: 3d76acec26d4ab8478f62d7fb2d44370,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2294353009104223914, guid: 3d76acec26d4ab8478f62d7fb2d44370,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d76acec26d4ab8478f62d7fb2d44370, type: 3}
