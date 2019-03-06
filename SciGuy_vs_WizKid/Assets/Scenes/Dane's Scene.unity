@@ -340,7 +340,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stringToEdit: Hello World
-  baseString: 'Currency: '
   testNumber: 0
   timeScale: 3.28
   currentTime: 0
@@ -1368,11 +1367,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5125363229813168347, guid: 3d76acec26d4ab8478f62d7fb2d44370,
-        type: 3}
-      propertyPath: m_IsTrigger
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 2294353009104223914, guid: 3d76acec26d4ab8478f62d7fb2d44370,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1381,6 +1375,11 @@ PrefabInstance:
     - target: {fileID: 2294353009104223914, guid: 3d76acec26d4ab8478f62d7fb2d44370,
         type: 3}
       propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5125363229813168347, guid: 3d76acec26d4ab8478f62d7fb2d44370,
+        type: 3}
+      propertyPath: m_IsTrigger
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1823,6 +1822,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023870626848123153, guid: 99d32dc4f3ef62c45ae98eab21d1bb81,
+        type: 3}
+      propertyPath: baseString
+      value: ' Currency: '
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99d32dc4f3ef62c45ae98eab21d1bb81, type: 3}

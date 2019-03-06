@@ -6,7 +6,7 @@ public class CurrencyGenerator : MonoBehaviour
 {
 
     public string stringToEdit = "";
-    public string baseString = "Currency: ";
+    //public string baseString = "Currency: ";
     public float testNumber = 0;
     public float timeScale = 1.0f;
     public float currentTime = 0.0f;
@@ -24,13 +24,16 @@ public class CurrencyGenerator : MonoBehaviour
     {
         variableManager = GameObject.Find("DefenseVariableManager");
         DefenseUnitComponent defense = variableManager.GetComponent<DefenseUnitComponent>();
-        testNumber = defense.currentCurrency;
-        
-        stringToEdit = baseString + testNumber;
         currentTime += Time.deltaTime;
-        if ((currentTime >= timeScale))
+        if ((currentTime >= timeScale) && (defense.currentPlayer == "WizKid"))
         {
-            defense.currentCurrency += 10;
+            defense.WizCurrency += 10;
+            
+            currentTime = 0.0f;
+        }
+        if ((currentTime >= timeScale) && (defense.currentPlayer == "SciGuy"))
+        {
+            defense.SciCurrency += 10;
             
             currentTime = 0.0f;
         }
